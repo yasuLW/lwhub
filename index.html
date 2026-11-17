@@ -573,14 +573,7 @@
     function updateStatusBanner(anonKey) {
       const banner = document.getElementById('storage-status-banner');
       if (anonKey) {
-        banner.className = 'rounded-2xl p-3.5 flex items-center justify-between text-xs bg-[#1d0324]/90 border border-[#ff3afc]/30 text-zinc-300';
-        banner.innerHTML = `
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-fuchsia-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span><strong class="text-white">Conectado a Supabase:</strong> Sincronización en la nube activa. Registrando visitas y clics globales.</span>
-          </div>
-          <button onclick="openSettingsModal()" class="underline text-fuchsia-300 hover:text-white shrink-0 ml-3">Ajustes</button>
-        `;
+        banner.style.display = 'none';
       } else {
         banner.className = 'rounded-2xl p-3.5 flex items-center justify-between text-xs bg-[#1d0324] border border-[#ff3afc]/40 text-fuchsia-200';
         banner.innerHTML = `
